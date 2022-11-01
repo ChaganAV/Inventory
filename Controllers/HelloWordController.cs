@@ -6,9 +6,9 @@ namespace Inventory.Controllers;
 
 public class HelloWordController : Controller
 {
-    public string Index()
+    public IActionResult Index()
     {
-        return "Этот метод по умолчанию";
+        return View();
     }
 
     public string Welcome()
