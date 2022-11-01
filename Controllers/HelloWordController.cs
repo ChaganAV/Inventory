@@ -11,8 +11,8 @@ public class HelloWordController : Controller
         return "Этот метод по умолчанию";
     }
 
-    public string Welcome()
+    public string Welcome(string name, int numTimes = 1)
     {
-        return "Этот метод Welcome";
+        return HtmlEncoder.Default.Encode($"Hello {name}, NumTimes is: {numTimes}");
     }
 }
