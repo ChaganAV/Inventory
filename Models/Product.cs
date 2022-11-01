@@ -1,9 +1,13 @@
+using System.ComponentModel.DataAnnotations;
 namespace Inventory.Models
 {
     public class Product
     {
         public int ProductID { get; set;}
-        public string Name { get; set;}
+        public string? Name { get; set;}
+        public string? Serial {get; set;}
+
+        [DataType(DataType.Date)]
         public DateTime DateProiz {get; set;}
         
         public string? Bios {get; set;}
