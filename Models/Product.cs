@@ -8,7 +8,7 @@ namespace Inventory.Models
         public string? Serial {get; set;}
 
         [DataType(DataType.Date)]
-        public DateTime DateProiz {get; set;}
+        public DateTime ReleaseDate {get; set;}
         
         public string? Bios {get; set;}
         public string? DallasAdmin {get; set;}

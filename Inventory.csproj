@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <!--Nullable>enable</Nullable-->
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-Inventory-ed1e67f4-4b8c-4a0b-9728-dbc9dcae80b5</UserSecretsId>
   </PropertyGroup>
