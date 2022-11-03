@@ -10,5 +10,5 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
-    public DbSet<Inventory.Models.Product>? Product { get; set; }
+    //public DbSet<Inventory.Models.Product>? Product { get; set; }
 }
