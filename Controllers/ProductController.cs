@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Inventory.Data;
+
 using Inventory.Models;
 
 namespace Inventory.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly InventoryDbContext _context;
 
-        public ProductController(ApplicationDbContext context)
+        public ProductController(InventoryDbContext context)
         {
             _context = context;
         }
@@ -24,7 +24,7 @@ namespace Inventory.Controllers
         {
               return _context.Product != null ? 
                           View(await _context.Product.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Product'  is null.");
+                          Problem("Entity set 'InventoryDbContext.Product'  is null.");
         }
 
         // GET: Product/Details/5
@@ -56,7 +56,7 @@ namespace Inventory.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductID,Name,Serial,ReleaseDate,Bios,DallasAdmin,DallasOper,DoctorID,Description,Category,DepartmentID")] Product product)
+        public async Task<IActionResult> Create([Bind("ProductID,Name,Serial,DateProiz,Bios,DallasAdmin,DallasOper,DoctorID,Description,Category,DepartmentID")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace Inventory.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductID,Name,Serial,ReleaseDate,Bios,DallasAdmin,DallasOper,DoctorID,Description,Category,DepartmentID")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("ProductID,Name,Serial,DateProiz,Bios,DallasAdmin,DallasOper,DoctorID,Description,Category,DepartmentID")] Product product)
         {
             if (id != product.ProductID)
             {
@@ -143,7 +143,7 @@ namespace Inventory.Controllers
         {
             if (_context.Product == null)
             {
-                return Problem("Entity set 'ApplicationDbContext.Product'  is null.");
+                return Problem("Entity set 'InventoryDbContext.Product'  is null.");
             }
             var product = await _context.Product.FindAsync(id);
             if (product != null)

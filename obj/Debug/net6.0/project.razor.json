@@ -16323,11 +16323,14 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
       "FilePath": "c:\\Projects\\Csharp\\Inventory\\Views\\HelloWord\\Index.cshtml",
       "TargetPath": "Views\\HelloWord\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
+=======
+>>>>>>> inventory
       "FilePath": "c:\\Projects\\Csharp\\Inventory\\Views\\Product\\Index.cshtml",
       "TargetPath": "Views\\Product\\Index.cshtml",
       "FileKind": "mvc"
@@ -16363,11 +16366,14 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
       "FilePath": "c:\\Projects\\Csharp\\Inventory\\Views\\HelloWord\\Welcome.cshtml",
       "TargetPath": "Views\\HelloWord\\Welcome.cshtml",
       "FileKind": "mvc"
     },
     {
+=======
+>>>>>>> inventory
       "FilePath": "c:\\Projects\\Csharp\\Inventory\\Views\\Product\\Delete.cshtml",
       "TargetPath": "Views\\Product\\Delete.cshtml",
       "FileKind": "mvc"

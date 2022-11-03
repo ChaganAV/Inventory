@@ -1,11 +1,16 @@
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Inventory.Models;
 
-namespace Inventory.Data;
+    public class InventoryDbContext : DbContext
+    {
+        public InventoryDbContext (DbContextOptions<InventoryDbContext> options)
+            : base(options)
+        {
+        }
 
-public class IntentoryDbContext : DbContext
-{
-    public IntentoryDbContext(DbContextOptions<IntentoryDbContext> options) : base(options) {}
-    public DbSet<Inventory.Models.Product> Products {get; set;}
-}
+        public DbSet<Inventory.Models.Product> Product { get; set; } = default!;
+    }
