@@ -14,10 +14,10 @@ namespace Inventory.Models
         public string? DallasAdmin {get; set;}
         public string? DallasOper {get; set;}
         public int DoctorID {get; set;}
-        public string? Doctor {get; set;}
+        //public string? Doctor {get; set;}
         public string? Description {get; set;}
         public string? Category {get; set;}
         public int DepartmentID {get; set;}
-        public string? Department {get; set;}
+        //public string? Department {get; set;}
     }
 }
