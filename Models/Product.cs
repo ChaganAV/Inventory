@@ -1,4 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Inventory.Models
 {
     public class Product
@@ -7,6 +9,9 @@ namespace Inventory.Models
         public string? Name { get; set;}
         public string? Serial {get; set;}
 
+        public string? InvNumber {get; set;}
+
+        [Display(Name = "Дата изготовления")]
         [DataType(DataType.Date)]
         public DateTime ReleaseDate {get; set;}
         
