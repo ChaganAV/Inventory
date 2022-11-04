@@ -56,7 +56,7 @@ namespace Inventory.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductID,Name,Serial,DateProiz,Bios,DallasAdmin,DallasOper,DoctorID,Description,Category,DepartmentID")] Product product)
+        public async Task<IActionResult> Create([Bind("ProductID,Name,Serial,InvNumber,ReleaseDate,Bios,DallasAdmin,DallasOper,DoctorID,Description,Category,DepartmentID")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace Inventory.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductID,Name,Serial,DateProiz,Bios,DallasAdmin,DallasOper,DoctorID,Description,Category,DepartmentID")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("ProductID,Name,Serial,InvNumber,ReleaseDate,Bios,DallasAdmin,DallasOper,DoctorID,Description,Category,DepartmentID")] Product product)
         {
             if (id != product.ProductID)
             {
